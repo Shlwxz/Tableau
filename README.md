@@ -7,40 +7,73 @@ This analysis explores bike-sharing trends across New York City using data from 
 
 ## 📊 Dashboards
 
-### 1. Weekday vs Weekend Ridership
-- **Visualizations:**
-  - Total Trips by Hour
-  - Breakdown by User Type
-  - Day of Week Heatmap
-- **Key Insight:** Weekday ridership spikes around commute hours, while weekend usage is more evenly spread.
+# 📊 NYC Citi Bike Analysis – Tableau Story
+**Project:** Module 18 – Citi Bike Tableau Challenge  
+**Link to Dashboard:**  
+🔗 [View on Tableau Public](https://public.tableau.com/app/profile/shahla.shahnawaz/viz/Book2_17447122414290/Story1)
 
-### 2. Station Popularity by Zip Code
-- **Visualizations:**
-  - Top 10 Start/End Stations
-  - Monthly Trends (Dropdown filter)
-  - Interactive Map with Zip Overlay
-- **Key Insight:** Midtown and Financial District stations dominate weekday traffic; parks and riverside stations rise in summer weekends.
+---
 
-## 🗺️ Map Highlights
+## 🚴 Overview
 
-- Stations sized by number of trips
-- Colors indicate trip volume buckets
-- Zip codes overlaid for regional context
-- Trend: Central business districts consistently drive high activity
+This interactive Tableau Story explores usage trends in New York City’s Citi Bike program using data from **2020** and **2023**. The goal is to identify **unexpected phenomena** in rider behavior to help city officials make informed decisions about infrastructure, bike availability, and policy planning.
 
-## 📈 Notable Phenomena
+---
 
-1. **Seasonal Peaks in Casual Users**
-   - Casual rider volume increases significantly from May to September.
-   - Avg. trip duration is longer for casual users, especially in summer.
+## 📌 Key Questions Answered
 
-2. **Member Commuting Behavior**
-   - Annual members show consistent 8–9AM and 5–6PM usage.
-   - These patterns align closely with weekday working hours.
+1. **When and how do members vs. casual riders use Citi Bikes?**
+2. **How does ride duration vary by user type and day?**
+3. **Which stations are most popular, and where might attention be needed?**
 
-## 🔍 Data Notes
+---
 
-- Time Period: [e.g. June–August 2023]
-- Cleaned for missing/erroneous birth years and start/end times
-- Converted trip duration from seconds to minutes
-- Created calculated fields for hour, day, and month
+## 🧭 What’s Inside the Story
+
+### 📍 Slide 1: Weekend Riding Patterns
+- Shows that **casual users** ride longer on **weekends**
+- Visuals include average trip duration by rider type and day
+- Implication: Weekend bike availability and scenic routes matter more for casual users
+
+### 📍 Slide 2: Weekday Commute Trends
+- Highlights that **members ride most during commute hours**
+- Clear spikes at 8 AM and 5–6 PM, Monday–Friday
+- Suggests the importance of maintaining bike availability at **transit hubs**
+
+### 📍 Slide 3: Station Heatmap
+- Interactive map showing popular start stations
+- Marker size = ride volume, color = average trip duration
+- Key finding: **Midtown, Downtown, and Parks** dominate usage
+
+### 📍 Slide 4: Summary
+- Recaps key takeaways:
+  - Casual users = long weekend rides
+  - Members = weekday commute focus
+  - Central NYC sees highest traffic
+
+---
+
+## 📈 Datasets Used
+- Combined Citi Bike trip data for 2020 & 2023 (cleaned/enriched)
+- Added fields:
+  - `trip_duration_minutes`
+  - `start_hour`, `day_of_week`, `month`
+  - `member_casual`, `weekday_vs_weekend`
+
+---
+
+## ✅ For City Officials
+
+This dashboard allows NYC policymakers to:
+- Adjust bike rebalancing by **day and rider type**
+- Optimize station design at **commuter hubs**
+- Plan for **tourism-heavy weekend areas**
+- Identify underserved neighborhoods
+
+---
+
+## 🧰 Tools Used
+- Tableau Public
+- Data Cleaning in Python (Pandas)
+- D3 Geospatial Logic (Map layers)
+
